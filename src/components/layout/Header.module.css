@@ -1,0 +1,20 @@
+.headerHover::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: .1em;
+    bottom: 0;
+    left: 0;
+    background-color: var(--black);
+    transform-origin: bottom right;
+    transition: transform .25s ease-out;
+}
+.homeHeader .headerHover::after{
+    background-color: var(--white);
+}
+.headerHover:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
